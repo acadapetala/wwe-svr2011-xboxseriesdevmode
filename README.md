@@ -14,7 +14,7 @@ Configuration and deployment guide to run **WWE SmackDown vs. Raw 2011** on **Xb
 
 ## Current Status
 
-- [x] **Boots natively on Xbox Dev Mode** (no startup black-screen crashes).
+- [x] **Boots natively on Xbox Dev Mode** (no startup crashes when set to 1080p).
 - [x] **Full 60 FPS in-ring gameplay** in 1-on-1 and standard exhibition matches.
 - [x] **Native wireless Xbox controller support** with trigger rumble and vibration.
 - [x] **Fixed in-match white screen lockup** (via D3D12 RTV pipeline).
@@ -24,7 +24,17 @@ Configuration and deployment guide to run **WWE SmackDown vs. Raw 2011** on **Xb
 
 ---
 
-## Simplified Setup Guide (4 Quick Steps)
+## Simplified Setup Guide
+
+> [!WARNING]
+> ### 🛑 CRITICAL PREREQUISITE: Console Resolution MUST be set to 1080p!
+> On Xbox Series S and Series X, **Xenia Canary UWP will crash immediately upon opening (instant black screen back to home) if your console output resolution is set to 4K.**
+> 
+> Before launching the app, you **MUST** change your Xbox display resolution to 1080p:
+> 1. Go to Xbox **Settings** $\rightarrow$ **General** $\rightarrow$ **TV & display options**.
+> 2. Set **Resolution** to **`1080p`** (do not leave it on 4K).
+
+---
 
 ### Step 1: Install via Xbox Device Portal
 1. Open the **Xbox Device Portal** in your PC browser (`https://<XBOX_IP>:11443`).
@@ -58,7 +68,7 @@ Configuration and deployment guide to run **WWE SmackDown vs. Raw 2011** on **Xb
 ---
 
 ### Step 4: Launch and Play
-1. Launch the app on your Xbox.
+1. Confirm that your Xbox display is set to **1080p**, then launch Xenia.
 2. Select your copy of *WWE SmackDown vs. Raw 2011* (`.iso` or extracted folder).
 3. In match options, set **`ENTRANCES: OFF`** for the smoothest loading and performance.
 4. Enjoy the match at 60 FPS!
